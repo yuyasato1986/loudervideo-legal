@@ -1,0 +1,148 @@
+/* 音だけ上げる / Louder Video — 法的文書の共通スタイル */
+
+:root {
+  --bg: #ffffff;
+  --fg: #1c1c1e;
+  --muted: #6b6b70;
+  --line: #e3e3e6;
+  --accent: #0a63c9;
+  --card: #f6f6f8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131315;
+    --fg: #ececef;
+    --muted: #9a9aa0;
+    --line: #303034;
+    --accent: #6fb0ff;
+    --card: #1d1d20;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0 20px 96px;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.85;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+header.doc {
+  padding: 48px 0 24px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 32px;
+}
+
+h1 {
+  font-size: 1.65rem;
+  line-height: 1.4;
+  margin: 0 0 12px;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 44px 0 12px;
+  padding-top: 8px;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 28px 0 8px;
+}
+
+p, li { margin: 0 0 14px; }
+
+ul, ol { padding-left: 1.4em; }
+
+li { margin-bottom: 8px; }
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0 0;
+  flex-wrap: wrap;
+}
+
+.lang-switch a {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--accent);
+}
+
+a { color: var(--accent); }
+
+.note {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 20px 0;
+}
+
+.note p:last-child { margin-bottom: 0; }
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 16px 0 20px;
+  -webkit-overflow-scrolling: touch;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 460px;
+  font-size: 0.92rem;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.65;
+}
+
+th { background: var(--card); font-weight: 600; }
+
+hr.section {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 72px 0 0;
+}
+
+footer.doc {
+  margin-top: 56px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+footer.doc strong { color: var(--fg); }
+
+.lang-section { scroll-margin-top: 24px; }
